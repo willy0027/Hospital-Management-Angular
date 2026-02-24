@@ -16,9 +16,10 @@ export const routes: Routes = [
       { path: 'register', component: RegisterComponent },
 
 
-      { path:'patient', component: PatientDashboardComponent, canActivate:[roleGuard], data:{role:'patient'} },
-      { path: 'doctor', component: DoctorDashboardComponent, canActivate:[roleGuard], data:{role:'doctor'} },
-      { path: 'admin', component: AdminDashboardComponent, canActivate:[roleGuard], data:{role:'admin'}}
+      { path:'patient-dashboard', component: PatientDashboardComponent, canActivate:[roleGuard], data:{role:'patient'} },
+      { path: 'doctor-dashboard', component: DoctorDashboardComponent, canActivate:[roleGuard], data:{role:'doctor'} },
+      { path: 'admin-dashboard', component: AdminDashboardComponent, canActivate:[roleGuard], data:{role:'admin'}},
+      { path: '**', redirectTo: 'login' }
 
 
 ];

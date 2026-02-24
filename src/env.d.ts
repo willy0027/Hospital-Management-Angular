@@ -1,9 +1,6 @@
-/// <reference types="vite/client" />
 
-interface ImportMetaEnv {
-  readonly VITE_API_URL: string;
-}
 
-interface ImportMeta {
-  readonly env: ImportMetaEnv;
-}
+
+export const environment = {
+  apiUrl: 'http://localhost:8000/api/v1'
+};

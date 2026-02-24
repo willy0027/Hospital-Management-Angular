@@ -1,1 +1,29 @@
-<p>doctor-dashboard works!</p>
+<h2>Doctor Dashboard</h2>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Status</th>
+      <th>Patient Name</th>
+        <th>Action</th>
+    </tr>
+
+
+
+
+        <tr *ngFor="let appt of appointments">
+  <td>{{ appt.id }}</td>
+  <td>{{ appt.status }}</td>
+  <td>{{ appt.patient.user.name }}</td>
+          <td>
+            <button (click)="cancelAppoitment(appt.id)">
+                Cancel
+
+            </button>
+        </td>
+
+
+
+    </tr>
+
+</table>
